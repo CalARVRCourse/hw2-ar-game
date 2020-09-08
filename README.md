@@ -1,4 +1,4 @@
-# hw2-ar-game: Building an AR Board Game
+# HW2: Building an AR Board Game
 
 ## Overview:
 
