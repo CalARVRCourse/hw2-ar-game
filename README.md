@@ -10,7 +10,7 @@ After you have accepted the assignment, a seperate repo "hw2-ar-game-YourGitID" 
 
 ### Deadline
 
-HW2 is due Friday 07/18/2020, 11:59PM. Both your code and video need to be turned in for your submission to be complete; HWs which are turned in after 11:59pm will use one of your late days -- there are no late minutes or late hours.
+HW2 is due Friday 07/18/2020, 11:59PM. Both your code and video need to be turned in for your submission to be complete; HWs which are turned in after 11:59pm will use one of your slip days -- there are no slip minutes or slip hours.
 
 ### Academic honesty
 Please do not post code to a public GitHub repository, even after the class is finished, since these HWs will be reused both  in the future.
@@ -94,7 +94,7 @@ Select AR Session Origin. In the inspection tab select Add Component and in the 
 In you scene hierarchy create an empty game object and name it “Plane Visualization Object”. Select this object. We are going to add several components to this: 
 AR Plane, AR Plane Mesh Visualizer, Mesh Renderer, Mesh Collider and Mesh Filter
 
-
+[](/Instructions/image1.png)
 
 This handles all the aspects for modifying and visualizing the plane, however it is currently using the default material for visualization which is opaque and not great for visualization. So let’s create our own material.  
 
