@@ -101,7 +101,6 @@ This handles all the aspects for modifying and visualizing the plane, however it
 In your project window, in the Assets folder, create a new folder and name it Materials. In this folder, Right Click->Create->Material and name it whatever you like. Select this material, set the rendering mode to: Transparent and click on the color selector next to Albedo. You can choose whatever color you like but set the Alpha Channel (the slider labeled A) to 75. Lastly change the source from “Metallic Alpha” to “Albedo Alpha”. This allows whatever object we attach this material to to appear semi-transparent. 
 
 
-
 Select our Plane Visualization Object and drag your new material into its component list. This completes our object. To turn it into a prefab, first create a Prefabs folder under Assets. Then simply drag our Plane Visualization Object from the hierarchy into this folder. You can now delete the object from the scene hierarchy. 
 
 Lastly drag your new prefab over to the Plane Prefab section of AR Session Origin-> AR Plane Manager.
