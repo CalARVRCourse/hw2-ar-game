@@ -94,7 +94,7 @@ Select AR Session Origin. In the inspection tab select Add Component and in the 
 In you scene hierarchy create an empty game object and name it “Plane Visualization Object”. Select this object. We are going to add several components to this: 
 AR Plane, AR Plane Mesh Visualizer, Mesh Renderer, Mesh Collider and Mesh Filter
 
-![image15.png](/Instructions/image15.png =250x)
+![image15.png](/Instructions/image15.png){:height="50%" width="50%"}
 
 This handles all the aspects for modifying and visualizing the plane, however it is currently using the default material for visualization which is opaque and not great for visualization. So let’s create our own material.  
 
