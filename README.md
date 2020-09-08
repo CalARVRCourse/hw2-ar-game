@@ -121,7 +121,7 @@ Now we need to set up the code that allows the user to choose a position for the
 Next we will add the script to actually place the game board. To your AR Session Origin select Add Component -> New Script and name it PlaceGameBoard. Double click on the script (in the box next to the word script, not the component itself) to open it. 
 
 Set up your script as shown below. For all code is this document, be sure to read the code and comments to understand what the code is doing. 
-
+```C++
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -201,7 +201,7 @@ public class PlaceGameBoard : MonoBehaviour
         return placed;
     }
 }
-
+```
 When you return to the unity editor you should see your script component now has a field for “Game Board”. Drag your game board object from your scene hierarchy into this field. 
 
 
