@@ -61,10 +61,10 @@ In Unity Hub create a new 3D Project.
     * Select ARCore XR Plugin and install it.
     * Select AR Foundation and install it. 
 * Go to File -> Build Settings
-* Select Android and press “Switch Platform” (this may take about a minute to complete)
-* Go to Player Settings -> Other Settings
-    * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
-    * Set Minimum API Level to Android 7.0
+   * Select Android and press “Switch Platform” (this may take about a minute to complete)
+   * Go to Player Settings -> Other Settings
+      * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
+      * Set Minimum API Level to Android 7.0
 
 ### For iOS users:
 Go to Window -> Package Manager 
