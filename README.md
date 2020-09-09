@@ -189,7 +189,8 @@ public class PlaceGameBoard : MonoBehaviour
                     placed = true;
                     // After we have placed the game board we will disable the
                     // planes in the scene as we no longer need them.
-                    planeManager.SetTrackablesActive(false);
+                    //planeManager.SetTrackablesActive(false); //For older versions of AR foundation
+                    planeManager.detectionMode = PlaneDetectionMode.None;
 
                 }
             }
@@ -198,7 +199,8 @@ public class PlaceGameBoard : MonoBehaviour
         {
             // The plane manager will set newly detected planes to active by 
             // default so we will continue to disable these.
-            planeManager.SetTrackablesActive(false);
+            //planeManager.SetTrackablesActive(false); //For older versions of AR foundation
+            planeManager.detectionMode = PlaneDetectionMode.None;
         }
     }
 
@@ -207,7 +209,8 @@ public class PlaceGameBoard : MonoBehaviour
     public void AllowMoveGameBoard()
     {
         placed = false;
-        planeManager.SetTrackablesActive(true);
+        //planeManager.SetTrackablesActive(true);
+        planeManager.detectionMode = PlaneDetectionMode.Horizontal;
     }
 
     // Lastly we will later need to allow other components to check whether the
