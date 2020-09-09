@@ -10,7 +10,7 @@ After you have accepted the assignment, a seperate repo "hw2-ar-game-YourGitID" 
 
 ### Deadline
 
-HW2 is due Friday 07/18/2020, 11:59PM. Both your code and video need to be turned in for your submission to be complete; HWs which are turned in after 11:59pm will use one of your late days -- there are no late minutes or late hours.
+HW2 is due Friday 07/18/2020, 11:59PM. Both your code and video need to be turned in for your submission to be complete; HWs which are turned in after 11:59pm will use one of your slip days -- there are no slip minutes or slip hours.
 
 ### Academic honesty
 Please do not post code to a public GitHub repository, even after the class is finished, since these HWs will be reused both  in the future.
@@ -56,32 +56,32 @@ To do this: In Unity Hub go to Installs->...->Add Modules and make sure iOS Buil
 In Unity Hub create a new 3D Project.
 
 ### For Android users:
-Go to Window -> Package Manager 
-Select Advanced -> Show Preview Packages
-Select ARCore XR Plugin and install it.
-Select AR Foundation and install it. 
-Go to File -> Build Settings
-Select Android and press “Switch Platform” (this may take about a minute to complete)
-Go to Player Settings -> Other Settings
-Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
-Set Minimum API Level to Android 7.0
+* Go to Window -> Package Manager 
+    * Select Advanced -> Show Preview Packages
+    * Select ARCore XR Plugin and install it.
+    * Select AR Foundation and install it. 
+* Go to File -> Build Settings
+   * Select Android and press “Switch Platform” (this may take about a minute to complete)
+   * Go to Player Settings -> Other Settings
+      * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
+      * Set Minimum API Level to Android 7.0
 
 ### For iOS users:
-Go to Window -> Package Manager 
-Select Advanced -> Show Preview Packages
-Select ARKit XR Plugin, ensure the version is set to 2.1.1, and install it.
-Select AR Foundation and install it. 
-Go to File -> Build Settings
-Select iOS and press “Switch Platform” (this may take about a minute to complete)
-Go to Player Settings -> Other Settings
-Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
-Set Signing Team ID to the ID for your Apple account. To find this open Keychain Access application (Applications > Utilities > Keychain Access on your Apple computer) under My Certificates double click on your iPhone Developer certificate. Your Signing Team ID is the value listed under Organization Unit.
-If this is not present, sign in to developer.apple.com with your Apple ID, you may be asked to accept the Developer Agreement. Do this, but do NOT sign up for a paid account. 
-Open XCode->Preferences->Accounts and add your Apple ID. You will then need to create an XCode project, XCode->File->New->Project and create any iOS project, to initialize a certificate.
-Check: Automatically Sign
-Set target minimum iOS Version to: 11.0
-Select: Requires ARKit support 
-Set Architecture to: ARM64
+* Go to Window -> Package Manager 
+   * Select Advanced -> Show Preview Packages
+   * Select ARKit XR Plugin, ensure the version is set to 2.1.1, and install it.
+   * Select AR Foundation and install it. 
+* Go to File -> Build Settings
+   * Select iOS and press “Switch Platform” (this may take about a minute to complete)
+   * Go to Player Settings -> Other Settings
+      * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
+      * Set Signing Team ID to the ID for your Apple account. To find this open Keychain Access application (Applications > Utilities > Keychain Access on your Apple computer) under My Certificates double click on your iPhone Developer certificate. Your Signing Team ID is the value listed under Organization Unit.
+         * If this is not present, sign in to developer.apple.com with your Apple ID, you may be asked to accept the Developer Agreement. Do this, but do NOT sign up for a paid account. 
+         * Open XCode->Preferences->Accounts and add your Apple ID. You will then need to create an XCode project, XCode->File->New->Project and create any iOS project, to initialize a certificate.
+      * Check: Automatically Sign
+      * Set target minimum iOS Version to: 11.0
+      * Select: Requires ARKit support 
+      * Set Architecture to: ARM64
 
 ## Identifying Planar Surfaces in AR:
 
@@ -94,19 +94,19 @@ Select AR Session Origin. In the inspection tab select Add Component and in the 
 In you scene hierarchy create an empty game object and name it “Plane Visualization Object”. Select this object. We are going to add several components to this: 
 AR Plane, AR Plane Mesh Visualizer, Mesh Renderer, Mesh Collider and Mesh Filter
 
-
+![image15.png](/Instructions/image15.png)
 
 This handles all the aspects for modifying and visualizing the plane, however it is currently using the default material for visualization which is opaque and not great for visualization. So let’s create our own material.  
 
 In your project window, in the Assets folder, create a new folder and name it Materials. In this folder, Right Click->Create->Material and name it whatever you like. Select this material, set the rendering mode to: Transparent and click on the color selector next to Albedo. You can choose whatever color you like but set the Alpha Channel (the slider labeled A) to 75. Lastly change the source from “Metallic Alpha” to “Albedo Alpha”. This allows whatever object we attach this material to to appear semi-transparent. 
 
-
+![image7.png](/Instructions/image7.png)
 
 Select our Plane Visualization Object and drag your new material into its component list. This completes our object. To turn it into a prefab, first create a Prefabs folder under Assets. Then simply drag our Plane Visualization Object from the hierarchy into this folder. You can now delete the object from the scene hierarchy. 
 
 Lastly drag your new prefab over to the Plane Prefab section of AR Session Origin-> AR Plane Manager.
 
- 
+![image10.png](/Instructions/image10.png) 
 
 Now it is time to build and run your application. Simply plug in your Mobile Device via USB and in Unity select File->Build And Run. You will likely get an error. 
 
@@ -123,7 +123,7 @@ Go to GameObject -> 3D Object -> Cube and name your new cube, “Game Board”. 
 
 For now, we will also deactivate our game board so that will not be present at the start of our game. To do this, deselect the checkbox at the very top of the inspector tab for your game board (right above the word “tag”).
 
-
+![image14.png](/Instructions/image14.png)
 
 Now we need to set up the code that allows the user to choose a position for the game board. Since we don’t know what the area will look like in advance, we will let the user choose where they want to place the game board. To the AR Session Origin we will add the component ARRaycastManager. Raycasting is how we convert a 2D position on the screen to a 3D position in world space. The ARRaycastManager lets us raycast to the planar regions detected by the Plane Manager we created in the previous step. 
 
@@ -213,6 +213,7 @@ public class PlaceGameBoard : MonoBehaviour
 ```
 When you return to the unity editor you should see your script component now has a field for “Game Board”. Drag your game board object from your scene hierarchy into this field. 
 
+![image8.png](/Instructions/image8.png)
 
 You should now build and run to test what you have done so far. By selecting a location on a detected plane, you should be able to place your game board. 
 
@@ -220,15 +221,17 @@ You will notice we haven’t actually used our function to allow the user to mov
 
 Select GameObject->UI->Canvas to add a Canvas to the scene. The Canvas is where we will place all 2D UI elements that are meant to appear attached to the screen. Now create a button GameObject->UI->Button. It should automatically appear under the canvas in the hierarchy.
 
+![image5.png](/Instructions/image5.png)
 
 First let’s set the button position and size to be more reasonable than the default. Select your button and inside the inspector change the width and height to 160 and 80 respectively. Then click on the icon showing multiple boxes and lines, above the word “Anchors”. This allows you to choose the general position of your button on the screen. Select bottom+center.  Now change the X and Y values of the Pivot field to 0.5 and 0 respectively. Lastly zero out the transform position, as these will have changed as you were modifying the other values to try and keep the button at its original position.
 
+![image11.png](/Instructions/image11.png)
 
 If you build and run now you should see a button present at the bottom of your screen, but clicking it doesn’t actually do anything. 
 
 To change this, in your button inspector, scroll down to the field labeled “On Click”. Press the + selection at the bottom of this field. Where the word “none” appears now, drag your AR Session Origin from your scene hierarchy into this location. Lastly change the “No Function” selection to PlaceGameBoard->AllowMoveGameBoard(). If you build and run now, after placing your game board, pressing this button should bring back the place visualization and allow you to move your game board to a new location. 
 
-
+![image3.png](/Instructions/image3.png)
 
 Lastly let’s change the button label to something more intuitive than “Button”. Expand your Button object in the scene hierarchy and select the Text object that appears below it. Change the text field under “Text (Script)” in the inspector to “Move Board”. Build and Run to see your changes. 
 
@@ -237,6 +240,8 @@ Making A Simple Interactable Object:
 Making interactable objects in AR is fairly easy. The short version is, we just have to check if a raycast from a user’s touch intersects with an interactable object, and call a function from that object. 
 
 So let’s make a couple objects to interact with. Create two new cubes in the scene, rescale them to be 10cm x 10cm x 10cm, and rename them “AR Button 1” and “AR Button 2”. Drag them to be part of the Game Board in your hierarchy. Reactivate your game board so you can see it, and then reposition your buttons to be at two separate locations on your game board. Don’t forget to deactivate your game board again once you do this. 
+
+![image6.png](/Instructions/image6.png)
 
 To make it easy for us to call different functions for each button we will create an abstract class which each button will inherit from. In the project window at the bottom of the screen, Right Click->Create->C# Script and name it OnTouch3D. All you need to place in this script is:
 
@@ -301,7 +306,7 @@ public class ARButton1 : MonoBehaviour, OnTouch3D
 
 Next let’s add a tag to our object to make it easy to tell that this object is interactable. Select your AR Button 1 and at the top of the inspector window, expand the “Tag” dropdown list and select “Add Tag”. Select + and add the tag “Interactable”. This tag will show up on the Tag dropdown list from now on. Select this as the tag for AR Button 1.
 
-
+![image4.png](/Instructions/image4.png)
 
 Now we need to create the script to actually perform the raycasting to this object. In AR Session Origin, Add Component -> New Script and name it “ARButton Manager”. In this script place the following: 
 
@@ -355,7 +360,7 @@ It is worth noting that that the button does not actually have to be visible for
 
 Let’s turn AR Button 2 into an invisible button. First, don’t forget to add the “Interactable” tag since we are now going to set up interaction for this button. Then disable the checkbox next to the “Mesh Renderer” component. This stops the button from being rendered, making it essentially invisible. 
 
-
+![image12.png](/Instructions/image12.png)
 
 Since moving an invisible object doesn’t make much sense, let’s instead have this object display a message on the screen. Add a new script to AR Button 2 and name it “ARButton2”. Open the script and add the following: 
 
@@ -379,7 +384,7 @@ public class ARButton2 : MonoBehaviour, OnTouch3D
 
 We will then need to create the Text object for this to reference. Add a Text object to the scene GameObject->UI->Text and rename it “Message Text”. We will leave this object centered, but be sure the (X,Y,Z) positions are all set to 0. Change the width and height to 250 and 60 respectively and change the font size to 28.  As with our Game Board we are going to set this to inactive to start. 
 
-
+![image13.png](/Instructions/image13.png)
 
 To make this a proper message, let’s also add a script to make the text go inactive again after a specified time. Add a new script component and name it DisappearingText. Open it and add the following:
 
@@ -417,10 +422,16 @@ public class DisappearingText : MonoBehaviour
 ```
 
 Next let’s add a panel to make the text more visible against the background scene. Right Click on your Message Text object in the scene hierarchy and select UI->Panel. This should automatically place a panel under the Message Text object. 
+
+![image5.png](/Instructions/image5.png)
+
 Select the panel and change the “Source Image” in the inspector to UISprite. 
+
+![image1.png](/Instructions/image1.png)
 
 Finally, select your AR Button 2 again and drag your Message Text object into the Message Text section of your AR Button 2 script. 
 
+![image2.png](/Instructions/image2.png)
 
 Build and run your game. After placing your game board you should now be able to click on the location where the button would be (if it were visible) and a message should appear on screen. 
 
