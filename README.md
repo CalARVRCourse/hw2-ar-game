@@ -94,7 +94,7 @@ Now you are ready to build your first AR App. The first thing we will do is crea
 
 First delete the main camera that is placed in the scene by default by unity. We will replace this by it’s AR Equivalent. This requires two objects: AR Session and AR Session Origin. At the bottom of your screen you should see a window labeled Project. In the search box type “ARSession” and drag both the ARSession and ARSessionOrigin objects into the scene hierarchy. 
 
-In the newest version of AR Foundation these will instead be in GameObject (or '+' or Right Cick in 'Hierarchy') -> XR -> ARSession/ ARSessionOrigin
+In the newest version of AR Foundation these will instead be in GameObject (or '+' or Right Click in 'Hierarchy') -> XR -> ARSession/ ARSessionOrigin
 
 Select AR Session Origin. In the inspection tab select Add Component and in the search box type “AR Plane Manager” and add it. You will notice that the plane prefab field is empty. We will fill this field by creating our own plane prefab. 
 
