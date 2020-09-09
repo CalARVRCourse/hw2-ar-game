@@ -56,15 +56,15 @@ To do this: In Unity Hub go to Installs->...->Add Modules and make sure iOS Buil
 In Unity Hub create a new 3D Project.
 
 ### For Android users:
-Go to Window -> Package Manager 
-Select Advanced -> Show Preview Packages
-Select ARCore XR Plugin and install it.
-Select AR Foundation and install it. 
-Go to File -> Build Settings
-Select Android and press “Switch Platform” (this may take about a minute to complete)
-Go to Player Settings -> Other Settings
-Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
-Set Minimum API Level to Android 7.0
+* Go to Window -> Package Manager 
+    * Select Advanced -> Show Preview Packages
+    * Select ARCore XR Plugin and install it.
+    * Select AR Foundation and install it. 
+* Go to File -> Build Settings
+* Select Android and press “Switch Platform” (this may take about a minute to complete)
+* Go to Player Settings -> Other Settings
+    * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
+    * Set Minimum API Level to Android 7.0
 
 ### For iOS users:
 Go to Window -> Package Manager 
