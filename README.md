@@ -66,7 +66,8 @@ In Unity Hub create a new 3D Project.
       * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
       * Set Minimum API Level to Android 7.0
    * Select Vulkan in Graphic APIs, and remove then by pressing the '-' button
-  [](/Instructions/vulkan.PNG)
+ 
+ ![](/Instructions/vulkan.PNG)
 
 ### For iOS users:
 * Go to Window -> Package Manager 
