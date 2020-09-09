@@ -55,6 +55,8 @@ To do this: In Unity Hub go to Installs->...->Add Modules and make sure iOS Buil
 
 In Unity Hub create a new 3D Project.
 
+In the Root Dirctory of your Unity Project, add the .gitignore file provided. This will ensure the exclusion of unecessary build files of Unity from the git repo.
+
 ### For Android users:
 * Go to Window -> Package Manager 
     * Select Advanced -> Show Preview Packages
