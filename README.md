@@ -65,7 +65,7 @@ In Unity Hub create a new 3D Project.
    * Go to Player Settings -> Other Settings
       * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
       * Set Minimum API Level to Android 7.0
-   * Select Vulkan in Graphic APIs, and remove then by pressing the '-' button
+   * Select Vulkan in Graphic APIs, and remove it by pressing the '-' button
  
  ![](/Instructions/vulkan.PNG)
 
@@ -85,6 +85,8 @@ In Unity Hub create a new 3D Project.
       * Set target minimum iOS Version to: 11.0
       * Select: Requires ARKit support 
       * Set Architecture to: ARM64
+
+At this point you should be able to build a blank API by pressing File-> Build Settings -> Build
 
 ## Identifying Planar Surfaces in AR:
 
