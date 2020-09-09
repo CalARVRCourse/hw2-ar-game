@@ -67,21 +67,21 @@ In Unity Hub create a new 3D Project.
       * Set Minimum API Level to Android 7.0
 
 ### For iOS users:
-Go to Window -> Package Manager 
-Select Advanced -> Show Preview Packages
-Select ARKit XR Plugin, ensure the version is set to 2.1.1, and install it.
-Select AR Foundation and install it. 
-Go to File -> Build Settings
-Select iOS and press “Switch Platform” (this may take about a minute to complete)
-Go to Player Settings -> Other Settings
-Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
-Set Signing Team ID to the ID for your Apple account. To find this open Keychain Access application (Applications > Utilities > Keychain Access on your Apple computer) under My Certificates double click on your iPhone Developer certificate. Your Signing Team ID is the value listed under Organization Unit.
-If this is not present, sign in to developer.apple.com with your Apple ID, you may be asked to accept the Developer Agreement. Do this, but do NOT sign up for a paid account. 
-Open XCode->Preferences->Accounts and add your Apple ID. You will then need to create an XCode project, XCode->File->New->Project and create any iOS project, to initialize a certificate.
-Check: Automatically Sign
-Set target minimum iOS Version to: 11.0
-Select: Requires ARKit support 
-Set Architecture to: ARM64
+* Go to Window -> Package Manager 
+   * Select Advanced -> Show Preview Packages
+   * Select ARKit XR Plugin, ensure the version is set to 2.1.1, and install it.
+   * Select AR Foundation and install it. 
+* Go to File -> Build Settings
+   * Select iOS and press “Switch Platform” (this may take about a minute to complete)
+   * Go to Player Settings -> Other Settings
+      * Change Package Name to: com.<your name>.<your project> example: com.johndoe.arboardgame
+      * Set Signing Team ID to the ID for your Apple account. To find this open Keychain Access application (Applications > Utilities > Keychain Access on your Apple computer) under My Certificates double click on your iPhone Developer certificate. Your Signing Team ID is the value listed under Organization Unit.
+         * If this is not present, sign in to developer.apple.com with your Apple ID, you may be asked to accept the Developer Agreement. Do this, but do NOT sign up for a paid account. 
+         * Open XCode->Preferences->Accounts and add your Apple ID. You will then need to create an XCode project, XCode->File->New->Project and create any iOS project, to initialize a certificate.
+      * Check: Automatically Sign
+      * Set target minimum iOS Version to: 11.0
+      * Select: Requires ARKit support 
+      * Set Architecture to: ARM64
 
 ## Identifying Planar Surfaces in AR:
 
